@@ -60,7 +60,7 @@ body {
     display: flex;
 }
 
-.menu__item a{
+.menu__item a {
     font-size: 24px;
     font-weight: 400;
     color: #fff;
@@ -82,7 +82,7 @@ body {
     flex-direction: column;
     text-align: center;
     min-height: calc(100vh - 123px);
-} 
+}
 
 .header__brand-name {
     font-family: 'Raleway', sans-serif;
@@ -139,24 +139,30 @@ body {
     position: relative;
 }
 
-    .sun:before {
-        content: url('../images/sun.svg');
-        position: absolute;
-        top: -9px;
-        left: -64px;
-    }
-    .airplane:before {
-        content: url('../images/plain.svg');
-        position: absolute;
-        top: 8px;
-        left: -3px;    
-    }
-    .serf:before {
-        content: url('../images/serf.svg');  
-        position: absolute;
-        top: 8px;
-        left: -13px;     
-    }
+.sun:before {
+    content: url('../images/sun.svg');
+    position: absolute;
+    top: -9px;
+    left: -64px;
+}
+
+.airplane:before {
+    content: url('../images/plain.svg');
+    position: absolute;
+    top: 8px;
+    left: -3px;
+}
+
+.serf:before {
+    content: url('../images/serf.svg');
+    position: absolute;
+    top: 8px;
+    left: -13px;
+}
+
+.profit-bottom__progress-bar {
+    flex: none;
+}
 
 .profit__item {
     display: flex;
@@ -165,18 +171,64 @@ body {
     align-items: center;
 }
 
+.profit__item:first-child {
+    padding-top: 13px;
+}
+
 .profit__item-descr {
     text-align: start;
     max-width: 350px;
-}
-
-.statistics__item {
-    text-align: start;
-    background-repeat: no-repeat;
-    background-size: contain;
     min-height: 15px;
 }
 
-.statistics__item span{
+.progress-bar {
+    text-align: start;
 }
 
+.progress-bar p {
+    margin: 0 0 18px;
+}
+
+.progress-bar span {
+    font-size: 24px;
+    font-weight: 400;
+    color: #242121;
+}
+
+.progress-bar__item {
+    display: inline-block;
+    width: 293px;
+    margin-right: 10px;
+}
+
+.profit-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.profit-bottom__text p {
+    max-width: 600px;
+    text-align: start;
+    margin-top: 0;
+    margin-bottom: 41px;
+}
+
+.motivation {
+    background-image: url('../images/Photo_serf.jpg');
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: calc(50vw - 7px);
+}
+
+.motivation__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: start;
+    padding: 200px 0 340px;
+}
+
+.motivation__text {
+    max-width: 507px;
+}
