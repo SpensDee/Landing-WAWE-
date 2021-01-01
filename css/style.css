@@ -114,9 +114,8 @@ body {
 
 .school__description {
     max-height: 420px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    column-count: 2;
+    column-gap: 120px;
     text-align: start;
 }
 
@@ -219,11 +218,11 @@ body {
 }
 
 .motivation {
-    
     background-position: top right;
     background-repeat: no-repeat;
     background-size: calc(50vw - 7px);
 }
+
 
 .motivation__wrapper {
     display: flex;
