@@ -113,7 +113,6 @@ body {
 }
 
 .school__description {
-    max-height: 420px;
     column-count: 2;
     column-gap: 120px;
     text-align: start;
