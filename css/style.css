@@ -323,8 +323,7 @@ button {
     cursor: pointer;
 }
 
-.gallery__btns,
-button:hover {
+.mixitup-control-active {
     color: #00B2A0;
 }
 
@@ -347,7 +346,7 @@ button:hover {
     bottom: 0;
     left: 0;
     background-color: rgba(10, 10, 10, 0.637);
-    transition: opacity 0.3s linear;
+    transition: all 0.4s cubic-bezier(1, 0.22, 0.49, 0.73);
     opacity: 0;
 }
 
@@ -362,8 +361,38 @@ button:hover {
     border: 1px solid #C4C4C4;
     color: #242121;
     margin-bottom: 224px;
+    outline: transparent;
     display: inline-block;
+    position: relative;
+    overflow: hidden;
 }
+
+.gallery__btn-more::before {
+    color: rgb(31, 29, 29);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, #08a6c2, #228d5b);
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s cubic-bezier(1, 0.22, 0.49, 0.73);
+}
+
+.gallery__btn-more:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+
+.gallery__btn-more:hover {
+    color: #fff;
+    transition: color 0.7s cubic-bezier(1, 0.22, 0.49, 0.73);
+}
+
 
 .blockquote {
     font-size: 36px;
@@ -570,8 +599,17 @@ object:hover {
     border: 1px solid #DADADA;
     max-width: 350px;
     margin-bottom: 0;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden; 
+    transition: background-color 0.4s cubic-bezier(1, 0.22, 0.49, 0.73);
+    transition: color 0.4s linear;
 }
 
+.input__submit:hover {
+    color: #fff;
+    background-color: #00B2A0;
+}  
 
 .connection__info {
     padding: 49px 0 53px 52px;
