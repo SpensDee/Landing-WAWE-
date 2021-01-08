@@ -11,4 +11,6 @@ $(function(){
             effects: "fade translateZ(-15px) rotateX(-90deg) rotateY(-90deg)"
         }
     });
+
+    fancybox-is-open
 });
