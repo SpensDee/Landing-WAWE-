@@ -159,9 +159,9 @@ body {
     margin-bottom: 88px;
 }
 
-.profit__title-sun,
-.profit__title-airplane,
-.profit__title-serf {
+.profit__title--sun,
+.profit__title--airplane,
+.profit__title--serf {
     font-size: 24px;
     font-weight: 400;
     color: #242121;
@@ -190,21 +190,21 @@ body {
     margin-top: 7px;
 }
 
-.profit__title-sun:before {
+.profit__title--sun:before {
     content: url('../images/sun.svg');
     position: absolute;
     top: -12px;
     left: -14px;
 }
 
-.profit__title-airplane:before {
+.profit__title--airplane:before {
     content: url('../images/plain.svg');
     position: absolute;
     top: 5px;
     left: 11px;
 }
 
-.profit__title-serf:before {
+.profit__title--serf:before {
     content: url('../images/serf.svg');
     position: absolute;
     top: 4px;
@@ -571,9 +571,21 @@ svg:hover {
     flex-direction: column;
     justify-content: space-between;
     background-color: #fff;
-    padding: 43px 32px 0px 64px;
+    padding: 40px 32px 0px 64px;
     transition: all 0.3s linear;
     justify-content: flex-start;
+}
+
+.package__item:first-child {
+    padding-left: 44px;
+}
+
+.package__item:nth-child(2) {
+    padding-left: 74px;
+} 
+
+.package__item:last-child {
+    padding-right: 28px;
 }
 
 
