@@ -211,44 +211,45 @@ body {
     left: 4px;
 }
 
-.profit-bottom__progress-bar {
+.profit__progress-item {
     flex: none;
 }
 
-.progress-bar {
+.profit__progress-bar {
     text-align: start;
 }
 
-.progress-bar p {
+.profit__progress-bar p {
     margin: 0 0 3px;
 }
 
-.progress-bar span {
+.profit__progress-bar span {
     font-size: 24px;
     font-weight: 400;
 }
 
-.progress-bar__item {
+.profit__progress-image {
     display: inline-block;
     width: 293px;
     margin-right: 10px;
 }
 
-.profit-bottom {
+.profit__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
 }
 
-.profit-bottom__text {
+.profit__text-wrapper {
     text-align: start;
     max-width: 600px;
     margin-top: 0;
     margin-bottom: 41px;
 }
 
-.profit-bottom__text p:first-child {
-    margin: 0 0 31px;
+.profit__text-wrapper p:first-child {
+    margin-top: 0;
+    margin-bottom: 31px;
 }
 
 .motivation {
@@ -286,7 +287,7 @@ body {
     margin-bottom: 30px;
 }
 
-.slider__descr a h2 {
+.blog__slider-descr a h3 {
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 48px;
     font-weight: 400;
@@ -295,11 +296,11 @@ body {
     max-width: 600px;
 }
 
-.slider__item .container {
+.blog__slider-item .container {
     position: relative;
 }
 
-.slider__item .slider__descr {
+.blog__slider-item .blog__slider-descr {
     text-align: start;
     max-width: 600px;
     position: absolute;
@@ -309,7 +310,7 @@ body {
 }
 
 
-.slider__subtitle {
+.blog__slider-subtitle {
     font-size: 14px;
     font-weight: 300;
 }
@@ -328,7 +329,8 @@ body {
 }
 
 .gallery {
-    text-align: center; /*если убрать свойство, тайтл слетит*/
+    text-align: center;
+    /*если убрать свойство, тайтл слетит*/
 }
 
 .gallery__title {
@@ -447,15 +449,15 @@ body {
     right: 27.3%;
 }
 
-.statistic {
+.presentation {
     padding: 195px 0 199px;
 }
 
-.statistic .container {
+.presentation .container {
     overflow: hidden;
 }
 
-.video {
+.presentation__video {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -466,13 +468,13 @@ body {
     margin-bottom: 193px;
 }
 
-.video__play {
+.presentation__video-play {
     opacity: 0.9;
     transition: opacity 0.4s linear 0s, transform 0.4s linear 0s;
 }
 
 
-.video,
+.presentation__video,
 svg:hover {
     opacity: 1;
     transform: scale(1.1);
@@ -503,19 +505,19 @@ svg:hover {
     padding-bottom: 170px;
 }
 
+.blog__title {
+    text-align: center;
+    margin-bottom: 229px;
+}
+
 .blog__slider {
     overflow: hidden;
 }
 
-.slider__item {
+.blog__slider-item {
     background-repeat: no-repeat;
     background-position: center center;
     min-height: 800px;
-}
-
-.blog__title {
-    text-align: center;
-    margin-bottom: 229px;
 }
 
 .team {
@@ -537,12 +539,12 @@ svg:hover {
     margin-bottom: 25px;
 }
 
-.person__name {
+.team__person-name {
     font-size: 18px;
     font-weight: 700;
 }
 
-.person__position {
+.team__position {
     font-weight: 400;
     margin-bottom: 204px;
     margin-top: 0;
@@ -561,12 +563,12 @@ svg:hover {
     margin-bottom: 216px;
 }
 
-.services__package {
+.services__packages {
     display: flex;
     justify-content: space-between;
 }
 
-.package__item {
+.services__item {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -576,26 +578,26 @@ svg:hover {
     justify-content: flex-start;
 }
 
-.package__item:first-child {
+.services__item:first-child {
     padding-left: 44px;
 }
 
-.package__item:nth-child(2) {
+.services__item:nth-child(2) {
     padding-left: 74px;
-} 
+}
 
-.package__item:last-child {
+.services__item:last-child {
     padding-right: 28px;
 }
 
 
-.package__item:hover {
+.services__item:hover {
     -webkit-box-shadow: 0px 0px 11px 5px rgba(34, 60, 80, 0.11);
     -moz-box-shadow: 0px 0px 11px 5px rgba(34, 60, 80, 0.11);
     box-shadow: 0px 0px 11px 5px rgba(34, 60, 80, 0.11);
 }
 
-.package__title {
+.services__title {
     font-size: 36px;
     font-weight: 400;
     color: #01353E;
@@ -609,18 +611,18 @@ svg:hover {
     margin-bottom: 20px;
 }
 
-.package__item .services__sum {
+.services__item .services__sum {
     font-size: 36px;
     font-weight: 400;
     color: #01353E;
     margin-top: 61px 0 0;
 }
 
-.package__item:first-child p {
+.services__item:first-child p {
     margin-top: 110px;
 }
 
-.sup {
+.services__sup {
     font-size: 18px;
     font-weight: 400;
     color: inherit;
@@ -652,9 +654,28 @@ svg:hover {
     margin-top: -10px;
 }
 
-.input__name::placeholder,
-.input__phone::placeholder,
-.input__textarea::placeholder {
+.connection__input-name,
+.connection__input-phone,
+.connection__textarea {
+    border-color: transparent transparent;
+    border-bottom: 2px solid #DADADA;
+    outline: transparent;
+    padding-bottom: 20px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.connection__form textarea,
+.connection__textarea {
+    margin-bottom: 73px;
+    min-height: 156px;
+    padding-top: 10px;
+    resize: none;
+}
+
+.connection__input-name::placeholder,
+.connection__input-phone::placeholder,
+.connection__textarea::placeholder {
     font-size: 18px;
     font-weight: 400;
     line-height: 1.0;
@@ -662,33 +683,15 @@ svg:hover {
     max-width: 260px;
 }
 
-[class^=input] {
-    border: none;
-    resize: none;
-    border-bottom: 2px solid #DADADA;
-    outline: transparent;
-    padding-bottom: 20px;
-    margin-bottom: 34px;
-    font-size: 20px;
-    font-weight: 400;
-}
-
-.input__name {
+.connection__input-name {
     margin-bottom: 22px;
 }
 
-.input__phone {
+.connection__input-phone {
     margin-bottom: 50px;
 }
 
-.connection__form textarea,
-.input__textarea {
-    margin-bottom: 73px;
-    min-height: 156px;
-    padding-top: 10px;
-}
-
-.input__submit {
+.connection__submit {
     font-size: 24px;
     font-weight: 400;
     line-height: 0.75;
@@ -703,7 +706,7 @@ svg:hover {
     transition: background-color 0.4s cubic-bezier(1, 0.22, 0.49, 0.73);
 }
 
-.input__submit:hover {
+.connection__submit:hover {
     color: #fff;
     background-color: #00B2A0;
 }
@@ -715,14 +718,14 @@ svg:hover {
     min-width: 600px;
 }
 
-.info__inner {
+.connection__info-inner {
     margin-bottom: 60px;
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
 }
 
-.info__inner p {
+.connection__info-inner p {
     margin: 0 0 5px;
 }
 
