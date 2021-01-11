@@ -10,8 +10,9 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1230px;
     margin: 0 auto;
+    padding: 0 15px;
 }
 
 
@@ -33,11 +34,48 @@ body {
 .title::after {
     content: '/';
     position: absolute;
-    bottom: -17px;
-    right: -50px;
+    bottom: -42px;
+    right: -35px;
     font-size: 71px;
     color: #00B2A0;
 }
+
+.animate-btn {
+    display: inline-block;
+    outline: transparent;
+    text-transform: uppercase;
+    background-color: transparent;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #C4C4C4;
+    padding: 23px 96px 21px;
+    margin-bottom: 185px;
+    font-size: 24px;
+    font-weight: 400;
+}
+    .animate-btn::before {
+        color: rgb(31, 29, 29);
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to left, #08a6c2, #228d5b);
+        z-index: -1;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.5s cubic-bezier(1, 0.22, 0.49, 0.73);
+    }
+        .animate-btn:hover::before {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+            .animate-btn:hover {
+                color: #fff;
+                transition: color 0.3s linear;
+            }
+
 
 .header {
     background-repeat: no-repeat;
@@ -129,12 +167,9 @@ body {
 }
 
 .school__text {
-    text-align: left;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: flex-start;
-    padding-top: 0px;
-    max-height: 533px;
+    display: grid;
+    grid-template-columns: 34em 34em;
+    grid-column-gap: 9em;
 }
 
 .school__text p {
@@ -143,14 +178,14 @@ body {
 
 .profit {
     text-align: center;
-    padding: 200px 0 142px;
+    padding: 200px 0 56px;
     background-color: #F8F8F8;
     padding-top: 196px;
 }
 
 .profit__title {
     padding-left: 0;
-    margin-bottom: 99px;
+    margin-bottom: 97px;
 }
 
 .profit__wrapper {
@@ -159,36 +194,35 @@ body {
     margin-bottom: 88px;
 }
 
-.profit__title--sun,
-.profit__title--airplane,
-.profit__title--serf {
+.profit__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.profit__item-title {
     font-size: 24px;
     font-weight: 400;
     color: #242121;
-    text-align: center;
     max-width: 214px;
     padding-left: 51px;
     position: relative;
     text-transform: uppercase;
+    align-self: center;
+    line-height: 1.25;
+    margin-bottom: 8px;
 }
 
-.profit__item {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.profit__item:first-child {
-    padding: 14px 0 0 5px;
+.profit__title--sun {
+    margin: 14px 0 14px;
 }
 
 .profit__item-descr p {
-    text-align: start;
+    margin-top: 0;
     max-width: 350px;
-    min-height: 15px;
-    margin-top: 7px;
+    text-align: left;
 }
+
 
 .profit__title--sun:before {
     content: url('../images/sun.svg');
@@ -272,7 +306,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 196px 0 314px;
+    padding: 200px 0 314px 20px;
 }
 
 .motivation__title {
@@ -304,8 +338,8 @@ body {
     text-align: start;
     max-width: 600px;
     position: absolute;
-    top: 316px;
-    right: 0;
+    top: 311px;
+    right: 11px;
     line-height: initial;
 }
 
@@ -313,6 +347,7 @@ body {
 .blog__slider-subtitle {
     font-size: 14px;
     font-weight: 300;
+    margin-top: 0;
 }
 
 .slick-dots li button:before {
@@ -387,47 +422,6 @@ body {
 .gallery__item:hover:before {
     opacity: 1;
 }
-
-.gallery__btn-more {
-    display: inline-block;
-    background-color: transparent;
-    padding: 23px 96px 21px;
-    margin-bottom: 185px;
-    border: 1px solid #C4C4C4;
-    font-size: 24px;
-    font-weight: 400;
-    outline: transparent;
-    text-transform: uppercase;
-    position: relative;
-    overflow: hidden;
-}
-
-.gallery__btn-more::before {
-    color: rgb(31, 29, 29);
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to left, #08a6c2, #228d5b);
-    z-index: -1;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.5s cubic-bezier(1, 0.22, 0.49, 0.73);
-}
-
-.gallery__btn-more:hover::before {
-    transform: scaleX(1);
-    transform-origin: left;
-}
-
-
-.gallery__btn-more:hover {
-    color: #fff;
-    transition: color 0.3s linear;
-}
-
 
 .blockquote {
     font-size: 36px;
@@ -551,13 +545,13 @@ svg:hover {
 }
 
 .services {
-    padding: 200px 0;
+    padding: 200px 0 184px;
     background-color: #F8F8F8;
     text-align: center;
 }
 
 .services__title {
-    margin-right: 20px;
+    font-size: 47px;
     margin-right: 53px;
     letter-spacing: 0.01em;
     margin-bottom: 216px;
@@ -571,25 +565,25 @@ svg:hover {
 .services__item {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     background-color: #fff;
-    padding: 40px 32px 0px 64px;
     transition: all 0.3s linear;
     justify-content: flex-start;
+    padding: 41px 0 45px;
+    max-width: 360px;
+    width: 100%;
 }
 
 .services__item:first-child {
-    padding-left: 44px;
+    padding-left: 43px;
 }
 
 .services__item:nth-child(2) {
-    padding-left: 74px;
+    padding-left: 31px;
 }
 
 .services__item:last-child {
-    padding-right: 28px;
+    padding-left: 31px;
 }
-
 
 .services__item:hover {
     -webkit-box-shadow: 0px 0px 11px 5px rgba(34, 60, 80, 0.11);
@@ -597,11 +591,11 @@ svg:hover {
     box-shadow: 0px 0px 11px 5px rgba(34, 60, 80, 0.11);
 }
 
-.services__title {
+.services__item-title {
     font-size: 36px;
     font-weight: 400;
     color: #01353E;
-    margin-bottom: 58px;
+    margin:0 26px 58px 0 ;
 }
 
 .services__text li {
@@ -611,21 +605,24 @@ svg:hover {
     margin-bottom: 20px;
 }
 
-.services__item .services__sum {
+.services__sum {
     font-size: 36px;
     font-weight: 400;
     color: #01353E;
-    margin-top: 61px 0 0;
+    margin-right: 20px;
 }
 
 .services__item:first-child p {
     margin-top: 110px;
 }
 
-.services__sup {
+.services__sum span {
     font-size: 18px;
     font-weight: 400;
     color: inherit;
+    vertical-align: middle;
+    padding-left: 5px;
+}
 }
 
 
@@ -651,7 +648,13 @@ svg:hover {
     flex-direction: column;
     min-width: 570px;
     margin-right: 31px;
-    margin-top: -10px;
+    margin-top: -16px;
+}
+
+.connection__btn {
+    max-height: 70px;
+    max-width: 350px;
+    margin: 0;
 }
 
 .connection__input-name,
