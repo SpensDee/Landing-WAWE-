@@ -660,27 +660,25 @@ svg:hover {
     margin: 0;
 }
 
-.connection__input-name,
-.connection__input-phone,
+.connection__input,
 .connection__textarea {
     border-color: transparent transparent;
     border-bottom: 2px solid #DADADA;
     outline: transparent;
-    padding-bottom: 20px;
     font-size: 20px;
     font-weight: 400;
 }
 
 .connection__form textarea,
 .connection__textarea {
-    margin-bottom: 73px;
+    margin-bottom: 72px;
     min-height: 156px;
-    padding-top: 10px;
+    padding-top: 14px;
+    padding-bottom: 91px;
     resize: none;
 }
 
-.connection__input-name::placeholder,
-.connection__input-phone::placeholder,
+.connection__input::placeholder,
 .connection__textarea::placeholder {
     font-size: 18px;
     font-weight: 400;
@@ -689,12 +687,15 @@ svg:hover {
     max-width: 260px;
 }
 
-.connection__input-name {
-    margin-bottom: 22px;
+.connection__input[type=email] {
+    margin-bottom: 28px;
+    padding-top: 9px;
+    padding-bottom: 15px;
 }
 
-.connection__input-phone {
+.connection__input[type=tel] {
     margin-bottom: 50px;
+    padding-bottom: 11px;
 }
 
 .connection__submit {
@@ -736,8 +737,9 @@ svg:hover {
 }
 
 .socials {
-    padding-bottom: 200px;
-    text-align: center;
+    padding-bottom: 197px;
+    display: flex;
+    justify-content: center;
 }
 
 .social__link {
