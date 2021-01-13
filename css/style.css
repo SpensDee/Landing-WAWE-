@@ -190,17 +190,6 @@ body {
     justify-content: flex-end;
 }
 
-.profit__item-heading {
-    font-size: 24px;
-    font-weight: 400;
-    max-width: 214px;
-    padding-left: 51px;
-    position: relative;
-    text-transform: uppercase;
-    align-self: center;
-    margin-bottom: 8px;
-}
-
 .profit__heading--sun {
     margin: 14px 0 14px;
 }
@@ -215,24 +204,54 @@ body {
     text-align: left;
 }
 
+.profit__item-heading {
+    font-size: 24px;
+    font-weight: 400;
+    max-width: 214px;
+    padding-left: 51px;
+    position: relative;
+    text-transform: uppercase;
+    align-self: center;
+    margin-bottom: 8px;
+}
+
+.profit__item-heading:before {
+    position: absolute;
+}
+
 
 .profit__heading--sun:before {
-    content: url('../images/sun.svg');
-    position: absolute;
+    content: '';
+    background-image: url('../images/sun.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 50px;
+    height: 50px;
     top: -12px;
     left: -14px;
 }
 
 .profit__heading--airplane:before {
-    content: url('../images/plain.svg');
-    position: absolute;
+    content: '';
+    background-image: url('../images/plain.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 50px;
+    height: 50px;
     top: 5px;
     left: 11px;
 }
 
 .profit__heading--serf:before {
-    content: url('../images/serf.svg');
-    position: absolute;
+    content: '';
+    background-image: url('../images/serf.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 50px;
+    height: 50px;
     top: 4px;
     left: 4px;
 }
