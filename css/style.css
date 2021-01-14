@@ -20,7 +20,7 @@ body {
     text-align: center;
     font-family: 'Raleway', sans-serif;
     text-transform: uppercase;
-    font-size: 48px;
+    font-size: calc(20px + 28 * (100vw / 1920));
     font-weight: 600;
     line-height: 1.17;
     color: #01353E;
@@ -206,7 +206,7 @@ body {
 
 .profit__descr p {
     margin-top: 0; /*сбросил стандартный отступ <p>*/
-    width: 350px;   
+    max-width: 350px;   
     text-align: left;
 }
 
@@ -225,6 +225,9 @@ body {
     position: absolute;
 }
 
+.profit__heading--sun {
+    margin-bottom: 15px;
+}
 
 .profit__heading--sun:before {
     content: '';
@@ -313,8 +316,8 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 89vh;
-    height: 78.6vh;
+    width: 50%;
+    height: 81%;
     top: 0px;
     right: 0;
 }
@@ -331,7 +334,8 @@ body {
 }
 
 .motivation__text p {
-    max-width: 507px;
+    text-align: justify;
+    max-width: 475px;
     margin-bottom: 30px;
 }
 
@@ -761,6 +765,17 @@ svg:hover {
 
 @media (max-width: 992px) {
 
+    
+    .title {
+        margin-bottom: 40px;
+    }
+
+    .title:after {
+        font-size: calc(40px + (21 + 21 * 0.7) * ((100vw - 320px) / 1920));
+        right: 8%;
+        top: 14%;
+    }
+
     .menu-item .menu-link  {
         font-size: 19px;
     }
@@ -771,7 +786,7 @@ svg:hover {
 
     .header__brand-name {
         padding-left: 0;
-        font-size: calc(60px + (100 + 100 * 0.7) * ((100vw - 320px) / 1230));
+        font-size: calc(60px + (100 + 100 * 0.7) * ((100vw - 320px) / 1230)); 
     }
 
     .header__title {
@@ -780,10 +795,6 @@ svg:hover {
 
     .header__scroll-icon {
         transform: scale(0.8);
-    }
-    
-    .title {
-        
     }
 
     .school {
@@ -801,14 +812,53 @@ svg:hover {
     }
 
     .school .school__title {
-        padding-left: 5%;
+        display: block;
+        text-align: center;
+        padding-left: 0;
         margin-bottom: 30px;
     }
 
-    .school__title:after {
-        font-size: calc(30px + (31 + 31 * 0.7) * ((100vw - 320px) / 1230));
-        right: -39px;
+    .profit {
+        padding: 90px 15px 40px;
     }
+
+    .profit__wrapper {
+        margin-bottom: 40px;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+    .profit__item {
+        margin-bottom: 20px;
+    }
+
+    .profit__title:after {
+        right: -6%;
+    }
+
+    .profit__progress-item {
+        margin-bottom: 20px;
+    }
+
+    .motivation__bcg {
+        display: none;
+    }
+
+    .motivation__wrapper {
+        padding: 90px 0 120px;
+        display: block;
+        width: 100%;
+    }
+
+    .motivation__title {
+        display: block;
+    }
+
+    .motivation__text p {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+
 }
 
 @media (max-width: 720px) {
@@ -890,9 +940,50 @@ svg:hover {
 }
 
 @media (max-width: 320px) {
+
+    .profit__text,
+    .motivation__text,
+    .school__text p {
+        font-size: 16px;
+    }
+
     .header__title {
         font-size: 14px;
     }
 
+    .school__text {
+        background-color: rgb(251, 251, 251);
+        max-height: 50vh;
+        overflow: auto;
+    }
+
+    .school__text::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .school__text::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    .school__text::-webkit-scrollbar-thumb {
+        background: #888;
+    }
+
+    .profit__progress-bar span {
+        display: block;
+    }
+
+    .school__title:after {
+        right: 21%;
+        top: 67%;
+    }
+
+    .motivation__title:after {
+        right: 0;
+    }
+
+    .profit__title:after {
+        right: 15%;
+        top: 49%;
 
 }
