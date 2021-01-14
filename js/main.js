@@ -3,6 +3,10 @@ $(function(){
        dots: true
     });
 
+    $('.menu__btn').on('click', function(){
+        $('.header__nav').toggleClass('header--active');
+    });
+
     const mixer = mixitup('.gallery__items', {
         animation: {
             duration: 938,
