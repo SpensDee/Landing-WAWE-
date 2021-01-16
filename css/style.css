@@ -29,7 +29,7 @@ body {
     position: relative;
 }
 
-.title::after {
+.title:after {
     content: '/';
     position: absolute;
     bottom: -29px;
@@ -765,6 +765,14 @@ svg:hover {
 
 @media (max-width: 992px) {
 
+
+    .school,
+    .profit,
+    .motivation__wrapper,
+    .video__wrapper,
+    .blog {
+        padding: 90px 15px 50px;
+    }
     
     .title {
         margin-bottom: 40px;
@@ -797,10 +805,6 @@ svg:hover {
         transform: scale(0.8);
     }
 
-    .school {
-        padding: 90px 0;
-    }
-
     .school__text  {
         grid-template-columns: 100%; 
         padding: 0 15px;
@@ -816,10 +820,6 @@ svg:hover {
         text-align: center;
         padding-left: 0;
         margin-bottom: 30px;
-    }
-
-    .profit {
-        padding: 90px 15px 40px;
     }
 
     .profit__wrapper {
@@ -845,7 +845,6 @@ svg:hover {
     }
 
     .motivation__wrapper {
-        padding: 90px 0 120px;
         display: block;
         width: 100%;
     }
@@ -859,9 +858,47 @@ svg:hover {
         padding: 0 15px;
     }
 
+    .gallery__items {
+        text-align: center;
+    }
+
+    .gallery__title:after {
+        right: -18%;
+    }
+
+    .video {
+        min-height: 400px;
+        margin-bottom: 90px;
+    }
+
+    .blog__title:after {
+        right: -29%;
+    }
+
+    .blog__slider {
+        max-height: 400px;
+    }
+
+    .blog__slider-descr {
+        top: 10em;
+        left: 5em;
+    }
+
+    .blog__slider-title {
+        font-size: 42px;
+    }
+
 }
 
 @media (max-width: 720px) {
+
+    .school,
+    .profit,
+    .motivation__wrapper,
+    .video__wrapper,
+    .blog {
+        padding: 70px 15px 30px;
+    }
 
     .header {
         padding-top: 30px;
@@ -936,9 +973,52 @@ svg:hover {
 
     .header__scroll-icon {
         transform: scale(0.7);
+        margin-bottom: 10px;
     }
-}
 
+    .gallery__btn {
+        font-size: 18px;
+    }
+
+    .animate-btn {
+        font-size: 20px;
+        padding: 20px 50px 20px;
+    }
+
+    .animate-btn {
+        margin-bottom: 90px;
+    }
+    
+    .blockquote {
+        font-size: 28px;
+    }
+    
+    .blockquote__author {
+        bottom: 28%;
+        right: 5.3%;
+    }
+
+    .stats {
+        flex-wrap: wrap;
+        padding: 0 30px;
+        column-gap: 20px;
+        justify-content: center;
+    }
+
+    .stats__title {
+        font-size: 46px;
+    }
+
+    .blog__slider-descr {
+        left: 3em;
+        top: 10em;
+    }
+
+    .blog__slider-title {
+        font-size: 36px;
+    }
+
+}
 @media (max-width: 320px) {
 
     .profit__text,
@@ -949,6 +1029,7 @@ svg:hover {
 
     .header__title {
         font-size: 14px;
+        margin: 2% 0 auto;
     }
 
     .school__text {
@@ -985,5 +1066,40 @@ svg:hover {
     .profit__title:after {
         right: 15%;
         top: 49%;
+    }
 
+    .gallery__btns {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .gallery__btns li{
+        width: 50%;
+        margin-bottom: 15px;
+    }
+
+    .animate-btn {
+        font-size: 18px;
+        padding: 15px 26px 15px;
+        margin-bottom: 60px;
+    }
+
+    .blockquote__author {
+        bottom: 19%;
+        right: 5.3%;
+    }
+
+    .video {
+        min-height: 200px;
+        margin-bottom: 40px;
+    }
+
+    .video__icon {
+        width: 50px;
+    }
+
+    .blog__slider {
+        max-height: 250px;
+    }
 }
