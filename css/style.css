@@ -114,11 +114,11 @@ body {
     display: flex;
 }
 
-.menu-item:not(:last-child) {
+.menu__item:not(:last-child) {
     margin-right: 45px;
 }
 
-.menu-item .menu-link {
+.menu__item .menu__link {
     font-size: 24px;
     font-weight: 400;
     color: #fff;
@@ -127,7 +127,7 @@ body {
     transition: border-color 0.3s linear;
 }
 
-.menu-item .menu-link:hover {
+.menu__item .menu__link:hover {
     border-color: #00B2A0;
 }
 
@@ -163,8 +163,7 @@ body {
 .school {
     padding: 189px 0;
 }
-
-.school .school__title {
+.school__title {
     margin-bottom: 83px;
     padding-left: 170px;
 }
@@ -193,16 +192,15 @@ body {
 .profit__item {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 160px;
 }
 
-.profit__heading--sun {
-    margin: 14px 0 14px;
-}
 
 .profit__descr p:first-child {
     margin-left: 17px;
-}
+} 
 
 .profit__descr p {
     margin-top: 0; /*сбросил стандартный отступ <p>*/
@@ -217,19 +215,15 @@ body {
     padding-left: 51px;
     position: relative;
     text-transform: uppercase;
-    align-self: center;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 .profit__item-heading:before {
     position: absolute;
 }
 
-.profit__heading--sun {
-    margin-bottom: 15px;
-}
 
-.profit__heading--sun:before {
+.profit--sun:before {
     content: '';
     background-image: url('../images/sun.svg');
     background-repeat: no-repeat;
@@ -241,7 +235,7 @@ body {
     left: -14px;
 }
 
-.profit__heading--airplane:before {
+.profit--airplane:before {
     content: '';
     background-image: url('../images/plain.svg');
     background-repeat: no-repeat;
@@ -253,7 +247,7 @@ body {
     left: 11px;
 }
 
-.profit__heading--serf:before {
+.profit--serf:before {
     content: '';
     background-image: url('../images/serf.svg');
     background-repeat: no-repeat;
@@ -326,7 +320,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 200px 0 331px;
+    padding: 197px 0 313px;
 }
 
 .motivation__title {
@@ -334,7 +328,6 @@ body {
 }
 
 .motivation__text p {
-    text-align: justify;
     max-width: 475px;
     margin-bottom: 30px;
 }
@@ -788,7 +781,7 @@ svg:hover {
         font-size: 19px;
     }
     
-    .menu-item:not(:last-child) {
+    .menu__item:not(:last-child) {
         margin-right: 20px;
     }
 
@@ -826,10 +819,6 @@ svg:hover {
         margin-bottom: 40px;
         flex-wrap: wrap;
         justify-content: space-around;
-    }
-    
-    .profit__item {
-        margin-bottom: 20px;
     }
 
     .profit__title:after {
@@ -909,8 +898,8 @@ svg:hover {
         background-color: rgba(2, 2, 2, 0.75);
         padding: 50px 30px 30px;
         position: absolute;
-        right: -14px;
-        top: 0;
+        right: -14px;        
+        top: -11px;
         transform: translateX(110%);
         transition: all 0.2s linear;
     }
@@ -919,23 +908,20 @@ svg:hover {
         transform: translatex(0);
     }
 
-    .menu-item:not(:last-child) {
-        margin: 0 0 20px 0;
+    .menu__item:not(:last-child) {
+        margin: 0 0 15px 0;
     }
 
-    .menu-link:hover {
-        border-bottom: 1px solid transparent;
+    .menu__item {
+        text-align: right;
     }
 
-    .menu-item {
+    .menu__item .menu__link {
+        font-size: calc(20px + (4 + 4 * 0.7) * ((100vw - 320px) / 1920));
         width: 100%;
         padding: 10px 50px;
         letter-spacing: 0.05em;
         text-align: right;
-    }
-
-    .menu-item .menu-link {
-        font-weight: 300;
     }
 
     .menu__btn {
