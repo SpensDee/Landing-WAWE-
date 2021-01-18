@@ -51,29 +51,26 @@ body {
     font-size: 24px;
     font-weight: 400;
 }
-    .animate-btn::before {
-        color: rgb(31, 29, 29);
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: linear-gradient(to left, #08a6c2, #228d5b);
-        z-index: -1;
-        transform: scaleX(0);
-        transform-origin: right;
-        transition: transform 0.5s cubic-bezier(1, 0.22, 0.49, 0.73);
-    }
-        .animate-btn:hover::before {
-            transform: scaleX(1);
-            transform-origin: left;
-        }
-            .animate-btn:hover {
-                color: #fff;
-                transition: color 0.3s linear;
-            }
 
+.animate-btn::before {
+    color: rgb(31, 29, 29);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to left, #08a6c2, #228d5b);
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s cubic-bezier(1, 0.22, 0.49, 0.73);
+}
+
+.animate-btn:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
 
 .header {
     background-repeat: no-repeat;
@@ -275,7 +272,7 @@ body {
 }
 
 .profit__progress-bar p {
-    margin: 0 0 3px; /* снова сбрасываю стили, нулевыми значениями*/
+    margin: 0 0 3px; 
 }
 
 .profit__progress-bar span {
@@ -501,15 +498,12 @@ svg:hover {
     max-width: 1230px;
     margin: 0 auto;
     padding: 0 15px;
-    position: relative;
+    
 }
 
 .blog__slider-descr {
     text-align: start;
     max-width: 600px;
-    position: absolute;
-    top: 22em;
-    right: 1em;
 }
 
 .blog__slider-subtitle {
@@ -531,27 +525,15 @@ svg:hover {
     font-size: 0;
     width: 15px;
     height: 15px;
+    outline: transparent;
 }
 
 .slick-dots li + li {
     margin-left: 15px;
 }
 
-.slick-dots li button:before {
-    font-size: 60px;
-    color: #fff;
-    margin: 17px;
-    position: absolute;
-    top: -120px;
-    left: -16px;
-}
-
-.slick-dots li.slick-active button:before {
-    color: #00B2A0;
-}
-
-.slick-prev, .slick-arrow {
-    display: none;
+.slick-dots .slick-active button{
+    background-color: #00B2A0;
 }
 
 .team {
@@ -796,9 +778,7 @@ svg:hover {
     }
 
     .title:after {
-        font-size: calc(40px + (21 + 21 * 0.7) * ((100vw - 320px) / 1920));
-        right: 8%;
-        top: 14%;
+        display: none;
     }
 
     .menu-item .menu-link  {
@@ -845,10 +825,6 @@ svg:hover {
         justify-content: space-around;
     }
 
-    .profit__title:after {
-        right: -6%;
-    }
-
     .profit__progress-item {
         margin-bottom: 20px;
     }
@@ -875,17 +851,9 @@ svg:hover {
         text-align: center;
     }
 
-    .gallery__title:after {
-        right: -18%;
-    }
-
     .video {
         min-height: 400px;
         margin-bottom: 90px;
-    }
-
-    .blog__title:after {
-        right: -29%;
     }
 
     .blog__slider {
@@ -899,6 +867,10 @@ svg:hover {
 
     .blog__slider-title {
         font-size: 42px;
+    }
+
+    .slick-dots {
+        right: 30%;
     }
 
 }
@@ -917,6 +889,7 @@ svg:hover {
         padding-top: 30px;
         overflow: hidden;
     }
+
     .menu{
         flex-direction: column;
         background-color: rgba(2, 2, 2, 0.75);
@@ -1026,12 +999,34 @@ svg:hover {
     }
 
     .blog__slider-title {
-        font-size: 36px;
+        font-size: 21px;
+    }
+
+    .slick-dots {
+        right: 30%;
+    }
+    
+    .slick-dots li button{
+        width: 10px;
+        height: 12px;
+    }
+    
+    .slick-dots li + li {
+        margin-left: 10px;
     }
 
 }
 
 @media (max-width: 570px) {
+
+    .school,
+    .profit,
+    .motivation__wrapper,
+    .video__wrapper,
+    .blog {
+        padding: 30px 10px 20px;
+    }
+
     .menu {
         top: -47px;
     }
@@ -1067,22 +1062,13 @@ svg:hover {
         background: #888;
     }
 
+    .profit__wrapper,
+    .profit__text {
+        margin-bottom: 0;
+    }
+
     .profit__progress-bar span {
         display: block;
-    }
-
-    .school__title:after {
-        right: 21%;
-        top: 67%;
-    }
-
-    .motivation__title:after {
-        right: 0;
-    }
-
-    .profit__title:after {
-        right: 15%;
-        top: 49%;
     }
 
     .gallery__btns {

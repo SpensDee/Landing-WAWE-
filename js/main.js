@@ -1,6 +1,7 @@
 $(function(){
     $('.blog__slider').slick({
-       dots: true
+       dots: true,
+       arrows: false
     });
 
     $('.menu__btn').on('click', function(){
