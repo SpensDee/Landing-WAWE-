@@ -477,13 +477,27 @@ svg:hover {
 
 .blog__slider {
     overflow: hidden;
-    position: relative;
 }
 
 .blog__slider-item {
     background-repeat: no-repeat;
     background-position: center center;
     min-height: 800px;
+    position: relative;
+}
+
+.blog__slider-wrapper {
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.blog__slider-descr {
+    text-align: start;
+    width: 600px;
+    position: absolute;
+    right: 19%;
+    top: 38%;
 }
 
 .blog__slider-title {
@@ -491,18 +505,6 @@ svg:hover {
     font-weight: 400;
     color: #fff;
     text-transform: uppercase;
-    max-width: 600px;
-}
-
-.blog__slider-wrapper {
-    max-width: 1230px;
-    margin: 0 auto;
-    padding: 0 15px;
-    
-}
-
-.blog__slider-descr {
-    text-align: start;
     max-width: 600px;
 }
 
@@ -808,7 +810,6 @@ svg:hover {
     }
 
     .school__text p {
-        text-align: justify;
         min-width: 100%;
     }
 
@@ -871,6 +872,10 @@ svg:hover {
 
     .slick-dots {
         right: 30%;
+    }
+
+    .blog__slider-item {
+        min-height: 600px;
     }
 
 }
@@ -993,11 +998,6 @@ svg:hover {
         font-size: 46px;
     }
 
-    .blog__slider-descr {
-        left: 3em;
-        top: 10em;
-    }
-
     .blog__slider-title {
         font-size: 21px;
     }
@@ -1015,6 +1015,18 @@ svg:hover {
         margin-left: 10px;
     }
 
+    .blog__slider-item {
+        min-height: 500px;
+    }
+
+    .blog__slider-title {
+        font-size: 25px;
+    }
+
+    .blog__slider-descr { 
+        width: 350px;
+    }
+
 }
 
 @media (max-width: 570px) {
@@ -1024,13 +1036,22 @@ svg:hover {
     .motivation__wrapper,
     .video__wrapper,
     .blog {
-        padding: 30px 10px 20px;
+        padding: 45px 10px 20px;
     }
 
     .menu {
         top: -47px;
     }
+
+    .blog__slider-title {
+        font-size: 21px;
+    }
+
+    .blog__slider-descr {
+        width: 225px;
+    }
 }
+
 @media (max-width: 320px) {
 
     .profit__text,
@@ -1102,8 +1123,20 @@ svg:hover {
         width: 50px;
     }
 
-    .blog__slider {
-        max-height: 250px;
+    .blog__slider-item {
+        min-height: 200px;
     }
 
+    .slick-dots {
+        right: 16%;
+    }
+
+    .blog__slider-descr {
+        top: 21%;
+        left: 13%;
+    }
+
+    .blog__slider-title {
+        font-size: 18px;
+    }
 }
