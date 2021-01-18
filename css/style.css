@@ -332,20 +332,6 @@ body {
     margin-bottom: 30px;
 }
 
-
-.slick-dots li button:before {
-    font-size: 60px;
-    color: #fff;
-    margin: 17px;
-    position: absolute;
-    top: -120px;
-    left: -16px;
-}
-
-.slick-dots li.slick-active button:before {
-    color: #00B2A0;
-}
-
 .gallery {
     text-align: center;
 }
@@ -494,6 +480,7 @@ svg:hover {
 
 .blog__slider {
     overflow: hidden;
+    position: relative;
 }
 
 .blog__slider-item {
@@ -525,9 +512,46 @@ svg:hover {
     right: 1em;
 }
 
-
 .blog__slider-subtitle {
     margin-top: 0;
+}
+
+.slick-dots {
+    display: flex;
+    position: absolute;
+    bottom: 10%;
+    right: 42.5%;
+
+}
+
+.slick-dots li button{
+    background-color: #CCC;
+    border: none;
+    border-radius: 50%;
+    font-size: 0;
+    width: 15px;
+    height: 15px;
+}
+
+.slick-dots li + li {
+    margin-left: 15px;
+}
+
+.slick-dots li button:before {
+    font-size: 60px;
+    color: #fff;
+    margin: 17px;
+    position: absolute;
+    top: -120px;
+    left: -16px;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #00B2A0;
+}
+
+.slick-prev, .slick-arrow {
+    display: none;
 }
 
 .team {
