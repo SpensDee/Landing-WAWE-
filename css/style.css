@@ -22,7 +22,7 @@ body {
     text-transform: uppercase;
     font-size: calc(20px + 28 * (100vw / 1920));
     font-weight: 600;
-    line-height: 1.17;
+    line-height: 1.2;
     color: #01353E;
     margin-bottom: 110px;
     display: inline-block;
@@ -47,7 +47,6 @@ body {
     overflow: hidden;
     border: 1px solid #C4C4C4;
     padding: 23px 96px 21px;
-    margin-bottom: 185px;
     font-size: 24px;
     font-weight: 400;
 }
@@ -95,9 +94,12 @@ body {
     margin: 0 auto auto;
 }
 
-.header__logo img {
+.logo {
     width: 60px;
     height: 60px;
+}
+
+.header__logo {
     position: absolute;
     left: 0;
     top: -2%;
@@ -115,7 +117,7 @@ body {
     margin-right: 45px;
 }
 
-.menu__item .menu__link {
+.menu__link {
     font-size: calc(20px + (4 + 4 * 0.7) * ((100vw - 320px) / 1920));
     font-weight: 400;
     color: #fff;
@@ -124,7 +126,7 @@ body {
     transition: border-color 0.3s linear;
 }
 
-.menu__item .menu__link:hover {
+.menu__link:hover {
     border-color: #00B2A0;
 }
 
@@ -176,10 +178,9 @@ body {
 }
 
 .profit {
-    text-align: center;  /*проверил, если убираю слетает влево тайтл и не только. Причину не смог выявить */
-    padding: 200px 0 56px;
+    text-align: center; 
+    padding: 194px 0 56px;
     background-color: #F8F8F8;
-    padding-top: 196px;
 }
 
 .profit__title {
@@ -200,12 +201,12 @@ body {
 } 
 
 .profit__descr p {
-    margin-top: 0; /*сбросил стандартный отступ <p>*/
+    margin-top: 0; 
     max-width: 350px;   
     text-align: left;
 }
 
-.profit__item-heading {
+.profit__heading {
     font-size: 24px;
     font-weight: 400;
     max-width: 214px;
@@ -215,7 +216,7 @@ body {
     margin-bottom: 10px;
 }
 
-.profit__item-heading:before {
+.profit__heading:before {
     position: absolute;
 }
 
@@ -271,11 +272,11 @@ body {
     text-align: start;
 }
 
-.profit__progress-bar p {
+.profit__declaration {
     margin: 0 0 3px; 
 }
 
-.profit__progress-bar span {
+.profit__score {
     font-size: 24px;
     font-weight: 400;
 }
@@ -331,6 +332,7 @@ body {
 
 .gallery {
     text-align: center;
+    padding-bottom: 187px;
 }
 
 .gallery__title {
@@ -397,8 +399,9 @@ body {
     font-style: italic;
     font-weight: 400;
     line-height: 1.13;
-    padding: 88px 0;
+    padding: 80px 0 83px;
     background-color: #F8F8F8;
+    text-align: center;
     position: relative;
     left: -15px;
 }
@@ -412,10 +415,6 @@ body {
     right: 27.3%;
 }
 
-.video__wrapper {
-    padding: 195px 0 0;
-}
-
 .video {
     display: flex;
     justify-content: center;
@@ -423,7 +422,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     min-height: 600px;
-    margin-bottom: 193px;
+    margin: 195px 0 193px;
     position: relative;
     transition: all 0.1s linear;
     opacity: 0.9;   
@@ -466,8 +465,7 @@ svg:hover {
 .blog {
     text-align: center;
     color: #fff;
-    padding-bottom: 166px;
-    padding-top: 193px;
+    padding: 195px 0;
 }
 
 .blog__title {
@@ -506,10 +504,6 @@ svg:hover {
     color: #fff;
     text-transform: uppercase;
     max-width: 600px;
-}
-
-.blog__slider-subtitle {
-    margin-top: 0;
 }
 
 .slick-dots {
@@ -729,6 +723,7 @@ svg:hover {
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
+    max-width: 325px;
 }
 
 .connection__info-inner p {
@@ -741,7 +736,7 @@ svg:hover {
     justify-content: center;
 }
 
-.social__link {
+.social__item {
     font-size: 24px;
     font-weight: 400;
     margin: 0 5px;
@@ -750,7 +745,7 @@ svg:hover {
     transition: color 0.3s linear;
 }
 
-.social__link:hover {
+.social__item:hover {
     color: #00B2A0;
 }
 
@@ -880,7 +875,13 @@ svg:hover {
 
 }
 
-@media (max-width: 720px) {
+@media (max-width: 720px), (max-height: 500px) {
+
+
+    body {
+        font-size: 16px;
+        line-height: 1.5;
+    }
 
     .school,
     .profit,
@@ -957,12 +958,16 @@ svg:hover {
     }
 
     .header__title {
-        font-size: 17px;
+        font-size: 21px;
     }
 
     .header__scroll-icon {
         transform: scale(0.7);
         margin-bottom: 10px;
+    }
+
+    .profit__item {
+        margin-bottom: 25px;
     }
 
     .gallery__btn {
@@ -1031,6 +1036,7 @@ svg:hover {
 
 @media (max-width: 570px) {
 
+
     .school,
     .profit,
     .motivation__wrapper,
@@ -1040,7 +1046,7 @@ svg:hover {
     }
 
     .menu {
-        top: -47px;
+        top: -71px;
     }
 
     .blog__slider-title {
@@ -1061,7 +1067,7 @@ svg:hover {
     }
 
     .header__title {
-        font-size: 14px;
+        font-size: 18px;
         margin: 2% 0 auto;
     }
 
