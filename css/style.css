@@ -25,7 +25,6 @@ body {
     line-height: 1.2;
     color: #01353E;
     margin-bottom: 110px;
-    display: inline-block;
     position: relative;
 }
 
@@ -162,9 +161,14 @@ body {
 .school {
     padding: 189px 0;
 }
+
 .school__title {
     margin-bottom: 83px;
-    padding-left: 170px;
+}
+
+.school__title:after {
+    bottom: -32px;
+    right: 103px;
 }
 
 .school__text {
@@ -178,13 +182,16 @@ body {
 }
 
 .profit {
-    text-align: center; 
     padding: 194px 0 56px;
     background-color: #F8F8F8;
 }
 
 .profit__title {
     margin-bottom: 97px;
+}
+
+.profit__title:after {
+    right: 248px;
 }
 
 .profit__item {
@@ -198,49 +205,43 @@ body {
 
 .profit__descr p:first-child {
     margin-left: 17px;
-} 
+}
 
 .profit__descr p {
-    margin-top: 0; 
-    max-width: 350px;   
-    text-align: left;
+    margin-top: 0;
+    max-width: 350px;
 }
 
 .profit__heading {
     font-size: 24px;
     font-weight: 400;
     max-width: 214px;
-    padding-left: 51px;
+    padding-left: 64px;
     position: relative;
     text-transform: uppercase;
     margin-bottom: 10px;
 }
 
 .profit__heading:before {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     position: absolute;
+    width: 50px;
+    height: 50px;
 }
 
 
 .profit--sun:before {
     content: '';
     background-image: url('../images/sun.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 50px;
-    height: 50px;
-    top: -12px;
-    left: -14px;
+    top: -7px;
+    left: -5px;
 }
 
 .profit--airplane:before {
     content: '';
     background-image: url('../images/plain.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 50px;
-    height: 50px;
     top: 5px;
     left: 11px;
 }
@@ -248,11 +249,6 @@ body {
 .profit--serf:before {
     content: '';
     background-image: url('../images/serf.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 50px;
-    height: 50px;
     top: 4px;
     left: 4px;
 }
@@ -261,19 +257,11 @@ body {
     display: flex;
     justify-content: space-between;
     margin-bottom: 88px;
-    align-items: flex-start; 
+    align-items: flex-start;
 }
 
 .profit__progress-item {
     flex: none;
-}
-
-.profit__progress-bar {
-    text-align: start;
-}
-
-.profit__declaration {
-    margin: 0 0 3px; 
 }
 
 .profit__score {
@@ -339,9 +327,13 @@ body {
     margin-bottom: 208px;
 }
 
+.gallery__title:after {
+    right: 442px;
+}
+
 .gallery__btns {
     display: flex;
-    margin-bottom: 42px;
+    margin: 0 0 42px 15px;
 }
 
 .gallery__btn {
@@ -365,15 +357,12 @@ body {
 }
 
 .gallery__items {
-    text-align: start;
-    margin: 0 auto 11px;
-    max-width: 1280px;
-    padding-left: 18px;
+    margin-bottom: 45px;
 }
 
 .gallery__item {
     display: inline-block;
-    margin: 0 20px 35px;
+    margin: 0 12px 18px;
     position: relative;
 }
 
@@ -418,17 +407,17 @@ body {
 .video {
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     background-position: center;
     background-repeat: no-repeat;
     min-height: 600px;
-    margin: 195px 0 193px;
+    margin: 195px 0 200px;
     position: relative;
     transition: all 0.1s linear;
-    opacity: 0.9;   
+    opacity: 0.9;
 }
 
-.video:hover{
+.video:hover {
     opacity: 1;
 }
 
@@ -437,8 +426,7 @@ body {
     transition: opacity 0.4s linear 0s, transform 0.4s linear 0s;
 }
 
-.video
-svg:hover {
+.video svg:hover {
     opacity: 1;
     transform: scale(1.1);
 }
@@ -469,8 +457,12 @@ svg:hover {
 }
 
 .blog__title {
-    text-align: center;
     margin-bottom: 234px;
+}
+
+.blog__title:after {
+    bottom: -37px;
+    right: 842px;
 }
 
 .blog__slider {
@@ -514,7 +506,7 @@ svg:hover {
 
 }
 
-.slick-dots li button{
+.slick-dots li button {
     background-color: #CCC;
     border: none;
     border-radius: 50%;
@@ -524,16 +516,15 @@ svg:hover {
     outline: transparent;
 }
 
-.slick-dots li + li {
+.slick-dots li+li {
     margin-left: 15px;
 }
 
-.slick-dots .slick-active button{
+.slick-dots .slick-active button {
     background-color: #00B2A0;
 }
 
 .team {
-    text-align: center;
     margin-bottom: -4px;
     padding-bottom: 190px;
 }
@@ -543,9 +534,15 @@ svg:hover {
     letter-spacing: 0.01em;
 }
 
+.team__title:after {
+    right: 343px;
+}
+
+.services__packages,
 .team__wrapper {
     display: flex;
     justify-content: space-between;
+    column-gap: 20px;
 }
 
 .team__wrapper img {
@@ -569,10 +566,12 @@ svg:hover {
 }
 
 .services__title {
-    font-size: 47px;
-    margin-right: 53px;
     letter-spacing: 0.01em;
     margin-bottom: 220px;
+}
+
+.services__title:after {
+    right: 335px;
 }
 
 .services__packages {
@@ -612,7 +611,7 @@ svg:hover {
     font-size: 36px;
     font-weight: 400;
     color: #01353E;
-    margin:0 26px 58px 0 ;
+    margin: 0 26px 58px 0;
 }
 
 .services__text li {
@@ -645,12 +644,12 @@ svg:hover {
     object-fit: none;
 }
 
-.connection {
-    text-align: center;
-}
-
 .connection__title {
     margin-bottom: 243px;
+}
+
+.connection__title:after {
+    right: 320px;
 }
 
 .connection__wrapper {
@@ -661,7 +660,8 @@ svg:hover {
 .connection__form {
     display: flex;
     flex-direction: column;
-    min-width: 570px;
+    width: 570px;
+    width: 100%;
     margin-right: 31px;
     margin-top: -16px;
 }
@@ -761,7 +761,7 @@ svg:hover {
 
 @media (max-width: 992px) {
 
-
+    .services,
     .school,
     .profit,
     .motivation__wrapper,
@@ -769,7 +769,12 @@ svg:hover {
     .blog {
         padding: 90px 15px 50px;
     }
-    
+    .connection__wrapper,
+    .team,
+    .gallery {
+        padding-bottom: 120px;
+    }
+
     .title {
         margin-bottom: 40px;
     }
@@ -778,17 +783,17 @@ svg:hover {
         display: none;
     }
 
-    .menu-item .menu-link  {
+    .menu-item .menu-link {
         font-size: 19px;
     }
-    
+
     .menu__item:not(:last-child) {
         margin-right: 20px;
     }
 
     .header__brand-name {
         padding-left: 0;
-        font-size: calc(60px + (100 + 100 * 0.7) * ((100vw - 320px) / 1230)); 
+        font-size: calc(60px + (100 + 100 * 0.7) * ((100vw - 320px) / 1230));
     }
 
     .header__title {
@@ -799,8 +804,8 @@ svg:hover {
         transform: scale(0.8);
     }
 
-    .school__text  {
-        grid-template-columns: 100%; 
+    .school__text {
+        grid-template-columns: 100%;
         padding: 0 15px;
     }
 
@@ -848,8 +853,9 @@ svg:hover {
     }
 
     .video {
-        min-height: 400px;
-        margin-bottom: 90px;
+        min-height: 378px;
+        margin-bottom: 140px;
+        margin-top: 140px;
     }
 
     .blog__slider {
@@ -857,7 +863,7 @@ svg:hover {
     }
 
     .blog__slider-descr {
-        top: 10em;
+        top: 7em;
         left: 5em;
     }
 
@@ -873,9 +879,38 @@ svg:hover {
         min-height: 600px;
     }
 
+    .services__packages {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .services__item {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .connection__wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .connection__form {
+        padding: 0 15px;
+    }
+    
+    .map {
+        margin-bottom: 100px;
+    }
+
+    .connection__btn {
+        margin: 0 auto;
+        margin-bottom: 90px;
+    }
+
 }
 
-@media (max-width: 720px), (max-height: 500px) {
+@media (max-width: 720px),
+(max-height: 500px) {
 
 
     body {
@@ -883,6 +918,7 @@ svg:hover {
         line-height: 1.5;
     }
 
+    .services,
     .school,
     .profit,
     .motivation__wrapper,
@@ -891,23 +927,29 @@ svg:hover {
         padding: 70px 15px 30px;
     }
 
+    .connection__wrapper,
+    .team,
+    .gallery {
+        padding-bottom: 30px;
+    }
+
     .header {
         padding-top: 30px;
         overflow: hidden;
     }
 
-    .menu{
+    .menu {
         flex-direction: column;
         background-color: rgba(2, 2, 2, 0.75);
         padding: 50px 30px 30px;
         position: absolute;
-        right: -14px;        
+        right: -14px;
         top: -11px;
         transform: translateX(110%);
         transition: all 0.2s linear;
     }
 
-    .header__nav.header--active .menu{
+    .header__nav.header--active .menu {
         transform: translatex(0);
     }
 
@@ -919,7 +961,7 @@ svg:hover {
         text-align: right;
     }
 
-    .menu__item .menu__link {
+    .menu__link {
         display: block;
         text-align: right;
         font-size: calc(20px + (4 + 4 * 0.7) * ((100vw - 320px) / 1920));
@@ -938,23 +980,24 @@ svg:hover {
         position: absolute;
         top: 3.5%;
         right: 2%;
-        
     }
 
-    .header__nav.header--active .menu__btn path:first-child {
+    path,
+    rect {
         transform-origin: center;
+        transition: all 0.4s linear;
+    }
+
+    .header--active .menu__btn path:first-child {
         transform: rotate(-46deg)translatey(4px);
-        transition: all 0.4s linear;
     }
 
-    .header__nav.header--active .menu__btn path:nth-child(2) {
+    .header--active .menu__btn path:nth-child(2) {
         display: none;
-    } 
+    }
 
-    .header__nav.header--active .menu__btn rect {
-        transform-origin: center;
+    .header--active .menu__btn rect {
         transform: rotate(47deg)translatey(-4px);
-        transition: all 0.4s linear;
     }
 
     .header__title {
@@ -967,7 +1010,7 @@ svg:hover {
     }
 
     .profit__item {
-        margin-bottom: 25px;
+        margin-bottom: 35px;
     }
 
     .gallery__btn {
@@ -982,11 +1025,11 @@ svg:hover {
     .animate-btn {
         margin-bottom: 90px;
     }
-    
+
     .blockquote {
         font-size: 28px;
     }
-    
+
     .blockquote__author {
         bottom: 28%;
         right: 5.3%;
@@ -1010,13 +1053,13 @@ svg:hover {
     .slick-dots {
         right: 30%;
     }
-    
-    .slick-dots li button{
+
+    .slick-dots li button {
         width: 10px;
         height: 12px;
     }
-    
-    .slick-dots li + li {
+
+    .slick-dots li+li {
         margin-left: 10px;
     }
 
@@ -1028,15 +1071,35 @@ svg:hover {
         font-size: 25px;
     }
 
-    .blog__slider-descr { 
+    .blog__slider-descr {
         width: 350px;
+    }
+
+    .services__packages,
+    .team__wrapper {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .services__item,
+    .team__person {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .map {
+        margin-bottom: 50px;
+    }
+
+    .connection__form {
+        flex-shrink: 0;
     }
 
 }
 
 @media (max-width: 570px) {
 
-
+    .services,
     .school,
     .profit,
     .motivation__wrapper,
@@ -1056,9 +1119,39 @@ svg:hover {
     .blog__slider-descr {
         width: 225px;
     }
+
+    .gallery {
+        padding-bottom: 0;
+    }
+
+    .blockquote {
+        font-size: 24px;
+    }
+
+    .video {
+        min-height: 378px;
+        margin-bottom: 65px;
+        margin-top: 50px;
+    }
+
+
+    .connection__wrapper {
+        margin-bottom: 30px;
+    }
+
+    .socials {
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+        padding: 30px 0;
+    }
+
+    .social__item {
+        margin-bottom: 25px;
+    }
+
 }
 
-@media (max-width: 320px) {
+@media (max-width: 360px) {
 
     .profit__text,
     .motivation__text,
@@ -1104,7 +1197,7 @@ svg:hover {
         margin-bottom: 20px;
     }
 
-    .gallery__btns li{
+    .gallery__btns li {
         width: 50%;
         margin-bottom: 15px;
     }
@@ -1118,6 +1211,10 @@ svg:hover {
     .blockquote__author {
         bottom: 19%;
         right: 5.3%;
+    }
+
+    .stats__title {
+        font-size: 39px;
     }
 
     .video {
@@ -1138,11 +1235,19 @@ svg:hover {
     }
 
     .blog__slider-descr {
-        top: 21%;
+        top: 9%;
         left: 13%;
     }
 
     .blog__slider-title {
         font-size: 18px;
+    }
+
+    .blockquote {
+        font-size: 18px;
+    }
+
+    .map {
+        margin-bottom: 30px;
     }
 }
