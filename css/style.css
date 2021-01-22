@@ -499,7 +499,8 @@ body {
 }
 
 .slick-dots li button:hover {
-    background-color: #919998;;
+    background-color: #919998;
+    ;
 }
 
 .slick-dots li+li {
@@ -742,12 +743,95 @@ body {
     .motivation__wrapper,
     .video__wrapper,
     .blog {
-        padding: 90px 15px 50px;
+        padding: 90px 15px 90px;
     }
+
     .connection__wrapper,
     .team,
     .gallery {
         padding-bottom: 120px;
+    }
+
+
+    .menu {
+        flex-direction: column;
+        background-color: rgba(2, 2, 2, 0.75);
+        padding: 50px 30px 30px;
+        position: absolute;
+        right: -14px;
+        top: -11px;
+        transform: translateX(110%);
+        transition: all 0.2s linear;
+    }
+
+    .header__nav.header--active .menu {
+        transform: translatex(0);
+    }
+
+    .menu__item:not(:last-child) {
+        margin: 0;
+    }
+
+
+    .menu-item .menu-link {
+        font-size: 19px;
+    }
+
+    /* 
+    .menu__item:not(:last-child) {
+        margin-right: 20px;
+    } */
+
+    .menu__item {
+        text-align: right;
+    }
+
+    .menu__link {
+        display: block;
+        text-align: right;
+        font-size: calc(20px + (8 + 8 * 0.7) * ((100vw - 320px) / 1920));
+        width: 100%;
+        padding: 10px 50px;
+        letter-spacing: 0.05em;
+    }
+
+    .menu__btn {
+        display: block;
+        background-color: transparent;
+        outline: transparent;
+        border: none;
+        padding: 0;
+        z-index: 2;
+        position: absolute;
+        top: 3.5%;
+        right: 2%;
+    }
+
+    path,
+    rect {
+        transform-origin: center;
+        transition: all 0.3s linear;
+    }
+
+    .header--active .menu__btn path:first-child {
+        transform: rotate(-46deg)translatey(4px);
+    }
+
+    .header--active .menu__btn path:nth-child(2) {
+        opacity: 0;
+    }
+
+    .header--active .menu__btn rect {
+        transform: rotate(47deg)translatey(-4px);
+    }
+
+    .header__title {
+        font-size: 21px;
+    }
+
+    .header__scroll-icon {
+        transform: scale(0.7);
+        margin-bottom: 10px;
     }
 
     .title {
@@ -757,14 +841,6 @@ body {
     .title:after {
         font-size: 43px;
         bottom: -21px;
-    }
-
-    .menu-item .menu-link {
-        font-size: 19px;
-    }
-
-    .menu__item:not(:last-child) {
-        margin-right: 20px;
     }
 
     .header__brand-name {
@@ -802,8 +878,12 @@ body {
         justify-content: space-around;
     }
 
+    .profit__item {
+        margin-bottom: 35px;
+    }
+
     .profit__progress-item {
-        margin-bottom: 20px;
+        margin-bottom: 32px;
     }
 
     .motivation__bcg {
@@ -872,12 +952,13 @@ body {
     .connection__wrapper {
         flex-direction: column;
         align-items: center;
+        margin-bottom: 0;
     }
 
     .connection__form {
         padding: 0 15px;
     }
-    
+
     .map {
         margin-bottom: 100px;
     }
@@ -885,6 +966,10 @@ body {
     .connection__btn {
         margin: 0 auto;
         margin-bottom: 90px;
+    }
+
+    .socials {
+        padding-bottom: 120px;
     }
 
 }
@@ -916,81 +1001,6 @@ body {
     .header {
         padding-top: 30px;
         overflow: hidden;
-    }
-
-    .menu {
-        flex-direction: column;
-        background-color: rgba(2, 2, 2, 0.75);
-        padding: 50px 30px 30px;
-        position: absolute;
-        right: -14px;
-        top: -11px;
-        transform: translateX(110%);
-        transition: all 0.2s linear;
-    }
-
-    .header__nav.header--active .menu {
-        transform: translatex(0);
-    }
-
-    .menu__item:not(:last-child) {
-        margin: 0;
-    }
-
-    .menu__item {
-        text-align: right;
-    }
-
-    .menu__link {
-        display: block;
-        text-align: right;
-        font-size: calc(20px + (4 + 4 * 0.7) * ((100vw - 320px) / 1920));
-        width: 100%;
-        padding: 10px 50px;
-        letter-spacing: 0.05em;
-    }
-
-    .menu__btn {
-        display: block;
-        background-color: transparent;
-        outline: transparent;
-        border: none;
-        padding: 0;
-        z-index: 2;
-        position: absolute;
-        top: 3.5%;
-        right: 2%;
-    }
-
-    path,
-    rect {
-        transform-origin: center;
-        transition: all 0.3s linear;
-    }
-
-    .header--active .menu__btn path:first-child {
-        transform: rotate(-46deg)translatey(4px);
-    }
-
-    .header--active .menu__btn path:nth-child(2) {
-        opacity: 0;
-    }
-
-    .header--active .menu__btn rect {
-        transform: rotate(47deg)translatey(-4px);
-    }
-
-    .header__title {
-        font-size: 21px;
-    }
-
-    .header__scroll-icon {
-        transform: scale(0.7);
-        margin-bottom: 10px;
-    }
-
-    .profit__item {
-        margin-bottom: 35px;
     }
 
     .gallery__btn {
@@ -1138,6 +1148,10 @@ body {
     .header__title {
         font-size: 18px;
         margin: 2% 0 auto;
+    }
+
+    .menu {
+        top: -7px;
     }
 
     .menu__link {
