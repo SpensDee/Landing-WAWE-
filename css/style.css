@@ -100,6 +100,7 @@ body {
     display: flex;
     align-items: center;
     min-height: 128px;
+    padding-right: 30px;
 }
 
 .logo {
@@ -109,8 +110,9 @@ body {
 
 .header__logo {
     position: absolute;
-    left: 0;
-    top: -2%;
+    left: 19%;
+    top: 25%;
+    z-index: 9;
 }
 
 .menu__btn {
@@ -122,7 +124,7 @@ body {
 }
 
 .menu__item:not(:last-child) {
-    margin-right: 45px;
+    margin-right: 40px;
 }
 
 .menu__link {
@@ -733,6 +735,13 @@ label {
     display: inline-block;
 }
 
+@media (max-width: 1420px) {
+
+    .header__logo {
+        left: 5%;
+    }
+}
+
 @media (max-width: 1024px) {
 
     .services,
@@ -752,7 +761,11 @@ label {
 
     .header__logo {
         left: 4%;
-        top: 0;
+        top: 6%;
+    }
+
+    .header__nav {
+        min-height: 70vh;
     }
 
     .menu {
@@ -766,7 +779,7 @@ label {
         position: absolute;
         right: -14px;
         left: -20px;
-        top: -50px;
+        top: 0;
         bottom: 30%;
         transform: translatey(-200%);
         transition: all 0.3s linear;
@@ -778,12 +791,14 @@ label {
     }
 
     .menu__item:not(:last-child) {
-        margin: 0;
+        margin-right: 0;
+        margin-bottom: 20px;
     }
 
 
-    .menu-item .menu-link {
+    .menu__link {
         font-size: 19px;
+        padding: 0 300px;
     }
 
     .menu__link {
@@ -802,7 +817,7 @@ label {
         padding: 0;
         z-index: 4;
         position: absolute;
-        top: 3.5%;
+        top: 8%;
         right: 4%;
     }
 
@@ -1003,6 +1018,10 @@ label {
         bottom: 0%;
     }
 
+    .menu__link {
+        padding: 0 150px;
+    }
+
     .gallery__btn {
         font-size: 18px;
     }
@@ -1105,9 +1124,13 @@ label {
         padding-right: 60px;
     }
 
+    .menu__link {
+        padding: 0 100px;
+    }
+
     .header__title {
         font-size: 18px;
-        margin: 2% 0 auto;
+        margin: auto 0;
     }
 
     .menu {
