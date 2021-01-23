@@ -92,7 +92,14 @@ body {
 }
 
 .header__nav {
-    margin: 0 auto auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    right: 0;
+    display: flex;
+    align-items: center;
+    min-height: 128px;
 }
 
 .logo {
@@ -134,7 +141,7 @@ body {
 
 .header__title {
     text-align: center;
-    margin: -4.5% 0 auto;
+    margin: auto 0;
     font-size: 24px;
     font-weight: 400;
     color: #000;
