@@ -101,6 +101,8 @@ body {
     align-items: center;
     min-height: 128px;
     padding-right: 30px;
+    background: linear-gradient(0deg, rgba(88, 103, 106, 0) 6%, rgba(88, 103, 106, 0.507) 35%);
+    z-index: 8;
 }
 
 .logo {
@@ -766,6 +768,7 @@ label {
 
     .header__nav {
         min-height: 70vh;
+        background: linear-gradient(0deg, rgba(88, 103, 106, 0) 73%, rgba(88, 103, 106, 0.507) 92%);
     }
 
     .menu {
@@ -780,7 +783,7 @@ label {
         right: -14px;
         left: -20px;
         top: 0;
-        bottom: 30%;
+        bottom: -46%;
         transform: translatey(-200%);
         transition: all 0.3s linear;
         z-index: 3;
@@ -845,7 +848,6 @@ label {
 
     .header__scroll-icon {
         transform: scale(0.7);
-        margin-bottom: 10px;
     }
 
     .title {
@@ -868,6 +870,7 @@ label {
 
     .header__scroll-icon {
         transform: scale(0.8);
+        margin-bottom: -40px;
     }
 
     .school__text {
@@ -980,7 +983,6 @@ label {
     }
 
     .socials {
-        /* padding-bottom: 120px; */
         margin-bottom: 120px;
     }
 
@@ -1014,8 +1016,8 @@ label {
         overflow: hidden;
     }
 
-    .menu {
-        bottom: 0%;
+    .menu__item:not(:last-child) {
+        margin-bottom: 10px;
     }
 
     .menu__link {

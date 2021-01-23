@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body id="home">
 
     <header class="header" style="background-image: url('images/bcg.jpg');">
         <div class="container">
@@ -25,32 +25,32 @@
                     <a class="logo"><img class="header__logo" src="images/logo.svg" alt="логотип"></a>
 
                     
-                <button class="menu__btn" aria-label="открыть меню">
-                    <svg width="30" height="18" viewBox="0 0 30 18" fill="none">
-                        <path d="M0 0H30V2H0V0Z" fill="white"></path>
-                        <path d="M0 8H30V10H0V8Z" fill="white"></path>
-                        <rect y="16" width="30" height="2" fill="white"></rect>
-                    </svg>
-                </button>
+                    <button class="menu__btn" aria-label="открыть меню">
+                        <svg width="30" height="18" viewBox="0 0 30 18" fill="none">
+                            <path d="M0 0H30V2H0V0Z" fill="white"></path>
+                            <path d="M0 8H30V10H0V8Z" fill="white"></path>
+                            <rect y="16" width="30" height="2" fill="white"></rect>
+                        </svg>
+                    </button>
 
                     <ul class="menu">
                         <li class="menu__item">
-                            <a class="menu__link" href="#">О нас</a>
+                            <a class="menu__link" href="#about">О нас</a>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link" href="#">Услуги</a>
+                            <a class="menu__link" href="#services">Услуги</a>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link" href="#">Стоимость</a>
+                            <a class="menu__link" href="#price">Стоимость</a>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link" href="#">Блог</a>
+                            <a class="menu__link" href="#blog">Блог</a>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link" href="#">Команда</a>
+                            <a class="menu__link" href="#team">Команда</a>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link" href="#">Контакты</a>
+                            <a class="menu__link" href="#contacts">Контакты</a>
                         </li>
                     </ul>
                 </nav>
@@ -60,13 +60,13 @@
                     Школа серфинга на канарских Островах
                 </h1>
 
-                <a class="header__scroll-icon" aria-label="кнопка скролла"></a>
+                <a class="header__scroll-icon" href="#about" aria-label="кнопка скролла"></a>
             </div>
         </div>
     </header>
 
     <main>
-        <section class="school">
+        <section class="school" id="about">
             <div class="container">
                 <h2 class="school__title title"> о школе, о серфинге, о канарах </h2>
                 <div class="school__text">
@@ -117,7 +117,7 @@
             </div>
         </section>
 
-        <section class="profit">
+        <section class="profit" id="services">
             <div class="container">
                 <h2 class="profit__title title">в школе вы получите</h2>
                 <div class="profit__wrapper">
@@ -316,7 +316,7 @@
             </li>
         </ul>
 
-        <section class="blog">
+        <section class="blog" id="blog">
             <h2 class="blog__title title">блог</h2>
             <div class="blog__slider ">
 
@@ -444,7 +444,7 @@
             </div>
         </section>
 
-     <section class="team">
+     <section class="team" id="team">
             <div class="container">
                 <h2 class="team__title title">наша команда</h2>
                 <div class="team__wrapper">
@@ -467,7 +467,7 @@
             </div>
         </section>
 
-       <section class="services">
+       <section class="services" id="price">
             <div class="container">
                 <h2 class="services__title title">
                     пакеты услуг
@@ -516,13 +516,10 @@
                 </div>
             </div>
         </section>
-
-     
-                <img class="map" src="images/map.jpg">
+    
+        <img class="map" src="images/map.jpg">
             
-        
-
-        <section class="connection">
+        <section class="connection" id="contacts">
             <div class="container">
                 <h2 class="connection__title title">оставить заявку</h2>
                 <div class="connection__wrapper">
@@ -562,7 +559,7 @@
         </section>
     </main>
     <footer class="footer">
-        <a class="footer__logo logo">
+        <a class="footer__logo logo" href="#home">
             <img src="images/logo.svg" alt="logo">
         </a>
     </footer> 

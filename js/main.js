@@ -1,10 +1,18 @@
 $(function(){
+
+    $('.menu__link, .header__scroll-icon, .footer__logo').on('click', function (e) {
+        e.preventDefault();
+        const id  = $(this).attr('href'),
+          top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1000);
+      });
+
     $('.blog__slider').slick({
        dots: true,
        arrows: false
     });
 
-    $('.menu__btn').on('click', function(){
+    $('.menu__btn, .menu__link').on('click', function(){
         $('.header__nav').toggleClass('header--active');
     });
 
