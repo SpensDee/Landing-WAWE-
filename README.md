@@ -6,3 +6,4 @@
 1. jQeury
 2. slick slider
 3. fancybox
+4. mixitup
